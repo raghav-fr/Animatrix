@@ -72,7 +72,7 @@ public class VerticalItemsListAdapter extends RecyclerView.Adapter<VerticalItems
                     holder.isAnimeSubDub.setBackgroundColor(activity.getColor(R.color.white));
                 }
             }else{
-                if (animeTitle.contains("(dub)")){
+                if (animeTitle.contains("(Dub)")){
                     holder.isAnimeSubDub.setTextColor(activity.getColor(R.color.white));
                     holder.isAnimeSubDub.setText("Dub");
                     holder.isAnimeSubDub.setBackgroundColor(activity.getColor(R.color.black));

@@ -80,6 +80,16 @@
         </activity>
         <activity
             android:name=".activities.MainActivity"
+            android:configChanges="uiMode|orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait"
+            tools:ignore="DiscouragedApi,LockedOrientationActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activities.SplashActivity"
             android:configChanges="orientation|uiMode|screenSize|keyboardHidden"
             android:exported="true"
             android:screenOrientation="sensorPortrait"

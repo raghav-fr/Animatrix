@@ -72,41 +72,43 @@ public class Scrapper {
                 assert episodes!=null;
                 Elements allListTags = episodes.select("li");
 
-                for(Element allListTag : allListTags){
+                for(Element allListTag : allListTags) {
                     JSONObject object = new JSONObject();
                     String animeId;
                     String episodeId;
                     String animeTitle;
                     String episodeNum;
-                    String subOrDub="";
+                    String subOrDub = "";
                     String animeImg;
 
-                    episodeId= Objects.requireNonNull(allListTag.select("a").first()).attr("href").trim();
-                    episodeId=episodeId.substring(1);
+                    episodeId = Objects.requireNonNull(allListTag.select("a").first()).attr("href").trim();
+                    episodeId = episodeId.substring(1);
 
-                    animeTitle=Objects.requireNonNull(allListTag.select("a").first()).attr("title").trim();
+                    animeTitle = Objects.requireNonNull(allListTag.select("a").first()).attr("title").trim();
                     animeImg = Objects.requireNonNull(allListTag.select("img").first()).attr("src").trim();
 
-                    if (document.getElementsByClass("ic-DUB").size() > 0){
-                        subOrDub="DUB";
+                    if (document.getElementsByClass("ic-DUB").size() > 0) {
+                        subOrDub = "DUB";
                     }
-                    if (document.getElementsByClass("ic-SUB").size()> 0){
-                        subOrDub="SUB";
+                    if (document.getElementsByClass("ic-SUB").size() > 0) {
+                        subOrDub = "SUB";
                     }
 
                     episodeNum = CustomMethods.extractEpisodeNumberFromId(episodeId).trim();
-                    animeId = episodeId.replace("-episode-"+ episodeNum , "").trim();
+                    animeId = episodeId.replace("-episode-" + episodeNum, "").trim();
 
-                    object.put("animeId",animeId);
+                    object.put("animeId", animeId);
                     object.put("episodeId", episodeId);
-                    object.put("animeTitle",animeTitle);
-                    object.put("episodeNum",episodeNum);
-                    object.put("subOrDub",subOrDub);
-                    object.put("animeImg",animeImg);
+                    object.put("animeTitle", animeTitle);
+                    object.put("episodeNum", episodeNum);
+                    object.put("subOrDub", subOrDub);
+                    object.put("animeImg", animeImg);
 
                     allAnime.put(object);
-                    new Handler(Looper.getMainLooper()).post(() -> recentScrapCallback.onScrapeComplete(allAnime));
+
                 }
+                new Handler(Looper.getMainLooper()).post(() -> recentScrapCallback.onScrapeComplete(allAnime));
+
             } catch (Exception e){
 //                e.printStackTrace();
                 new Handler(Looper.getMainLooper()).post(() -> recentScrapCallback.onScrapeFailed(e.getMessage()));

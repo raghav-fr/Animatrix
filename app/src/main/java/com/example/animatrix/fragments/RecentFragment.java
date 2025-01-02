@@ -127,6 +127,7 @@ public class RecentFragment extends Fragment {
 
                         int startPosition = rvAdapter.getItemCount(); // Get the current item count
 
+//                        Toast.makeText(activity, String.valueOf(allAnime.length()), Toast.LENGTH_SHORT).show();
                         CustomMethods.mergeTwoJsonArray(allAnime, resultAnime);
 
                         int itemCount = rvAdapter.getItemCount() - startPosition; // Calculate the number of inserted items

@@ -16,7 +16,7 @@
     <string name="feedback_email">khageswardeheri2003@gmail.com</string>
     <string name="episode_playing_failed_message">Error plaing video</string>
     <string name="proxy_setting_title">Proxy</string>
-    <string name="proxy_setting_summary_on">Now you are able to browse Fogplix Anime through proxy</string>
+    <string name="proxy_setting_summary_on">Now you are able to browse Animatrix through proxy</string>
     <string name="proxy_setting_summary_off">Use proxy to bypass your ISP (Internet Service Provider) blockage</string>
     <string name="skip_85s_title">Show 85s Skip Button</string>
     <string name="skip_85s_summary_on">85 seconds skip button is enabled</string>
