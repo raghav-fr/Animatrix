@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Animatrix</string>
+    <string name="subbed">Sub</string>
+    <string name="dubbed">Dub</string>
+    <string name="chinese">Chinese</string>
+    <string name="movies">Movies</string>
+    <string name="genres">Genres</string>
+    <string name="popular">Popular</string>
+    <string name="synopsis">Synopsis</string>
+
+    <string name="gogoload_recent">https://ajax.gogocdn.net/ajax/page-recent-release.html</string>
+    <string name="gogoload_list_episodes">https://ajax.gogocdn.net/ajax/load-list-episode</string>
+    <string name="gogoanime_url">https://anitaku.bz</string>
+    <string name="proxy_browser_link">https://proxy.fogplix-anime.com/browse.php?link=</string>
+    <string name="user_agent">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36</string>
+    <string name="feedback_email">khageswardeheri2003@gmail.com</string>
+    <string name="episode_playing_failed_message">Error plaing video</string>
+    <string name="proxy_setting_title">Proxy</string>
+    <string name="proxy_setting_summary_on">Now you are able to browse Fogplix Anime through proxy</string>
+    <string name="proxy_setting_summary_off">Use proxy to bypass your ISP (Internet Service Provider) blockage</string>
+    <string name="skip_85s_title">Show 85s Skip Button</string>
+    <string name="skip_85s_summary_on">85 seconds skip button is enabled</string>
+    <string name="skip_85s_summary_off">85 seconds skip button is disabled.</string>
+    <string name="auto_play_next_episode_summary_off">Next episode will not play automatically.</string>
+    <string name="auto_play_next_episode_summary_on">Next episode will be played when current episode ended.</string>
+    <string name="auto_play_next_episode_title">Auto Play Next Episode</string>
+</resources>

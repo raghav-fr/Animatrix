@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".activities.SearchActivity"
+    tools:ignore="HardcodedText,ContentDescription,Autofill,UseCompoundDrawables">
+
+    <RelativeLayout
+        android:id="@+id/searchBarContainer"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginBottom="7dp">
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="12dp"
+            android:scaleType="centerInside"
+            android:background="@drawable/round"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:contentDescription="Back"
+            android:src="@drawable/arrow_back" />
+
+        <EditText
+            android:id="@+id/searchET"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toStartOf="@+id/micIconBtn"
+            android:layout_toEndOf="@+id/backBtn"
+            android:background="@drawable/round_transparent_ripple_button"
+            android:hint="Search anime..."
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:lines="1"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/grey"
+            android:textSize="18sp"
+            tools:ignore="VisualLintTextFieldSize"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"/>
+
+        <ImageButton
+            android:id="@+id/micIconBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="12dp"
+            android:scaleType="centerInside"
+            android:background="@drawable/round"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:contentDescription="Mic"
+            android:src="@drawable/mic" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searchBarContainer"
+        android:paddingStart="7dp"
+        android:paddingEnd="7dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/loaderProgressOnBottom"
+            android:layout_marginBottom="-961dp" />
+
+        <ProgressBar
+            android:id="@+id/loaderProgressInCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/white"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/loaderProgressOnBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginVertical="12dp"
+            android:indeterminateTint="@color/white"
+            android:visibility="gone" />
+
+
+        <LinearLayout
+            android:id="@+id/noAnimeContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/not_found" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No anime found"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
