@@ -53,6 +53,7 @@ dependencies {
     implementation libs.activity
     implementation libs.material
     implementation libs.constraintlayout
+    implementation libs.monitor
     testImplementation libs.junit
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
