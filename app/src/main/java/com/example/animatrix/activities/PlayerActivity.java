@@ -949,7 +949,7 @@ public class PlayerActivity extends AppCompatActivity {
             public void run() {
 
                 if (exoPlayer != null) {
-                    Toast.makeText(PlayerActivity.this, String.valueOf(introStartTimeMS), Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(PlayerActivity.this, String.valueOf(introStartTimeMS), Toast.LENGTH_SHORT).show();
 
                     long currentPositionMS = exoPlayer.getCurrentPosition(); // Get current position in milliseconds
 
